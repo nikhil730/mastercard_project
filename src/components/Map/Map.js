@@ -26,10 +26,11 @@ const markers = [
   },
 ];
 
+console.log(process.env.REACT_APP_API_KEY);
 function MyComponent() {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyB5SZNGhV6C6m7MPwdtqiUJb7uAVeodPRk",
+    googleMapsApiKey: process.env.REACT_APP_API_KEY,
   });
 
   const [map, setMap] = React.useState(null);
@@ -56,8 +57,6 @@ function MyComponent() {
     >
       {/* Child components, such as markers, info windows, etc. */}
       {markers.map((mark) => {
-        console.log(markers[0]);
-        console.log(mark);
         return (
           <Marker
             position={mark}
