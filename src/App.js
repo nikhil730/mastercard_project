@@ -1,15 +1,16 @@
 import React from "react";
 import "./App.css";
-import { Nav } from "./components/Nav/Nav";
+import Nav from "./components/Nav/Nav"
 import Map from "./components/Map/Map";
+import List from "./components/List/List";
+import { Grid } from "@material-ui/core";
 
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <div>
-        <Map />
-      </div>
+     <Nav/>
+     <Map/>
+     <List/>
     </div>
   );
 }

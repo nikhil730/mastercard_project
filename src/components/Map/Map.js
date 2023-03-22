@@ -27,6 +27,7 @@ const markers = [
   },
 ];
 
+// console.log(process.env.REACT_APP_API_KEY);
 console.log(process.env.REACT_APP_API_KEY);
 function MyComponent() {
   const { isLoaded } = useJsApiLoader({
