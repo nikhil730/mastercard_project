@@ -4,6 +4,7 @@ import { Marker } from "@react-google-maps/api";
 import "./Map.css";
 import location from "../Data/Data";
 import markerimg from "./marker.png";
+import { useHistory } from "react-router-dom";
 
 const containerStyle = {
   width: "675px",
@@ -36,6 +37,11 @@ function MyComponent() {
   const onUnmount = React.useCallback(function callback(map) {
     setMap(null);
   }, []);
+  const history = useHistory();
+  const handleclick = (e) => {
+    e.preventDefault();
+    history.push("/Description");
+  };
 
   return isLoaded ? (
     <GoogleMap
@@ -43,6 +49,7 @@ function MyComponent() {
       mapContainerStyle={containerStyle}
       center={center}
       zoom={2}
+      onClick={handleclick}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
