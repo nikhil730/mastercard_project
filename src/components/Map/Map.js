@@ -37,9 +37,9 @@ function MyComponent() {
   }, []);
   const history = useHistory();
   const handleclick = (e) => {
-    // e.preventDefault();
-    // history.push("/Description");
     console.log("hello");
+    // e.preventDefault();
+    history.push("/description");
   };
 
   return isLoaded ? (
