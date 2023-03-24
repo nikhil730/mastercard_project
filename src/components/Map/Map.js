@@ -49,7 +49,7 @@ function MyComponent() {
       mapContainerClassName="map"
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={2}
+      zoom={4}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >

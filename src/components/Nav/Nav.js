@@ -3,6 +3,7 @@ import { AppBar, Toolbar, Typography, Box, Select,MenuItem } from "@material-ui/
 import Names from "../Data/Names";
 import "./Nav.css";
 import DescriptionPage from "../DescriptionPage/DescriptionPage";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -18,7 +19,7 @@ const Header = () => {
           {/* <Select onChange={handleChange}> */}
           <Select>
             {Names.map((name, i) => {
-              return <MenuItem value={name.name}>{name.name}</MenuItem>;
+              return <Link to="/description"><MenuItem value={name.name}>{name.name}</MenuItem></Link> ;
             })}
           </Select>
         </Box>
