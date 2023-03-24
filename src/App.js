@@ -2,17 +2,22 @@ import React from "react";
 import "./App.css";
 import Nav from "./components/Nav/Nav"
 import Map from "./components/Map/Map";
-import List from "./components/List/List";
-
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import DescriptionPage from "./components/DescriptionPage/DescriptionPage";
 
 function App() {
   return (
-    <div className="App">
-
-     <Nav/>
-     <Map/>
-     <List/>
-    </div>
+    <Router>
+      <Nav/>
+      <Switch>
+        <Route exact path="/">
+          <Map/>
+        </Route>
+        <Route exact path="/description">
+          <DescriptionPage/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

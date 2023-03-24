@@ -1,10 +1,9 @@
 import React from 'react'
-import Description from '../Data/Description'
 
-export const DescriptionPage = (props) => {
+const DescriptionPage = () => {
   return (
-    <div className="DescriptionPage">
-        <h3>{Description[props.index].describe}</h3>
-    </div>
+    <div>DescriptionPage</div>
   )
 }
+
+export default DescriptionPage
