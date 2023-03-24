@@ -2,6 +2,7 @@ import React from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { Marker } from "@react-google-maps/api";
 import "./Map.css";
+import Data from '../Data/Data'
 
 const containerStyle = {
   width: "675px",
@@ -64,18 +65,11 @@ function MyComponent() {
           <Marker
             position={mark}
             icon={
-              "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
+              "../marker.png"
             }
           />
         );
       })}
-      {/* <Marker
-        position={markers[0]}
-        icon={
-          "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png"
-        }
-        onClick={handleclick}
-      /> */}
     </GoogleMap>
   ) : (
     <></>
