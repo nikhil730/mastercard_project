@@ -2,7 +2,8 @@ import React from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { Marker } from "@react-google-maps/api";
 import "./Map.css";
-import Data from '../Data/Data'
+import Data from "../Data/Data";
+import markerimg from "./marker.png";
 
 const containerStyle = {
   width: "675px",
@@ -61,14 +62,7 @@ function MyComponent() {
     >
       {/* Child components, such as markers, info windows, etc. */}
       {markers.map((mark) => {
-        return (
-          <Marker
-            position={mark}
-            icon={
-              "../marker.png"
-            }
-          />
-        );
+        return <Marker position={mark} icon={markerimg} />;
       })}
     </GoogleMap>
   ) : (
