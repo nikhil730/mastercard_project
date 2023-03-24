@@ -14,20 +14,6 @@ const center = {
   lat: 28.7041,
   lng: 77.1025,
 };
-const markers = [
-  {
-    lat: 28.7041,
-    lng: 77.1025,
-  },
-  {
-    lat: 19.7515,
-    lng: 75.7139,
-  },
-  {
-    lat: 32.1024,
-    lng: 77.5619,
-  },
-];
 
 // console.log(process.env.REACT_APP_API_KEY);
 console.log(process.env.REACT_APP_API_KEY);
