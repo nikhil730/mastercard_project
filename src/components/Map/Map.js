@@ -39,8 +39,9 @@ function MyComponent() {
   }, []);
   const history = useHistory();
   const handleclick = (e) => {
-    e.preventDefault();
-    history.push("/Description");
+    // e.preventDefault();
+    // history.push("/Description");
+    console.log("hello");
   };
 
   return isLoaded ? (
@@ -49,13 +50,14 @@ function MyComponent() {
       mapContainerStyle={containerStyle}
       center={center}
       zoom={2}
-      onClick={handleclick}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
       {/* Child components, such as markers, info windows, etc. */}
       {location.map((mark) => {
-        return <Marker position={mark} icon={markerimg} />;
+        return (
+          <Marker onClick={handleclick} position={mark} icon={markerimg} />
+        );
       })}
     </GoogleMap>
   ) : (
