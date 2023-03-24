@@ -3,16 +3,21 @@ import { AppBar, Toolbar, Typography, Box, Select,MenuItem } from "@material-ui/
 import Names from "../Data/Names";
 
 import "./Nav.css";
+import { DescriptionPage } from "../DescriptionPage/DescriptionPage";
 
 const Header = () => {
+
+  const handleChange = (i) => {
+    <DescriptionPage index={i}/>
+  }
 
   return (
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h5">Navbar</Typography>
         <Box display="flex">
-          <Select>
-            {Names.map((name) => {
+          <Select onChange={handleChange}>
+            {Names.map((name, i) => {
               return <MenuItem value={name.name}>{name.name}</MenuItem>;
             })}
           </Select>
