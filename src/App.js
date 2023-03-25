@@ -16,7 +16,7 @@ function App() {
           </center>
         </Route>
         <Route exact path="/description">
-          <DescriptionPage/>
+          <DescriptionPage props={{ text: "state" }} />
         </Route>
       </Switch>
     </Router>
