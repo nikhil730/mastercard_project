@@ -7,7 +7,10 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
 
-
+  const handleClick = (event) =>{
+    console.log(event);
+    <DescriptionPage text={event} />
+  }
 
   return (
     <AppBar style={{backgroundColor: "#696D66"}} position="static">
@@ -18,8 +21,9 @@ const Header = () => {
         <Box>
           {/* <Select onChange={handleChange}> */}
           <Select>
-            {Names.map((name, i) => {
-              return <Link to="/description"><MenuItem value={name.name}>{name.name}</MenuItem></Link>;
+            {Names.map((name) => {
+              // return <Link to="/description"><MenuItem onClick={handleClick} value={name.name}>{name.name}</MenuItem></Link>;
+              return <Link to="/description" onClick={()=>handleClick(name.name)}><MenuItem  value={name.name}>{name.name}</MenuItem></Link>;
             })}
           </Select>
         </Box>
