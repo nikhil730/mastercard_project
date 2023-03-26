@@ -13,7 +13,7 @@ import DescriptionPage from "../DescriptionPage/DescriptionPage";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import Data from '../Data/Data'
+import Data from "../Data/Data";
 
 const Header = () => {
   const location = useLocation();
@@ -41,10 +41,16 @@ const Header = () => {
                 <Link
                   to={{
                     pathname: "/description",
-                    state: { name: name.name, description: name.description, lat: name.lat, lng: name.lng },
+                    state: {
+                      from: "nav",
+                      name: name.name,
+                      description: name.description,
+                      lat: name.lat,
+                      lng: name.lng,
+                    },
                   }}
 
-                // onClick={() => handleClick(name.name)}
+                  // onClick={() => handleClick(name.name)}
                 >
                   <MenuItem value={name.name}>{name.name}</MenuItem>
                 </Link>

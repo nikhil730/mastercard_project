@@ -36,10 +36,19 @@ function MyComponent() {
     setMap(null);
   }, []);
   const history = useHistory();
-  const handleclick = (e) => {
-    console.log("hello");
-    // e.preventDefault();
-    history.push("/description");
+  const handleclick = (props) => {
+    console.log(props);
+
+    history.push({
+      pathname: "/description",
+      state: {
+        from: "map",
+        name: props.name,
+        description: props.description,
+        lat: props.lat,
+        lng: props.lng,
+      },
+    });
   };
 
   const location = useLocation();
@@ -56,19 +65,18 @@ function MyComponent() {
       {/* Child components, such as markers, info windows, etc. */}
       {Data.map((name) => {
         return (
-          <Link
-            to={{
-              pathname: "/description",
-              state: {
+          <Marker
+            onClick={() =>
+              handleclick({
                 name: name.name,
                 description: name.description,
                 lat: name.lat,
                 lng: name.lng,
-              },
-            }}
-          >
-            <Marker onClick={handleclick} position={name} icon={markerimg} />
-          </Link>
+              })
+            }
+            position={name}
+            icon={markerimg}
+          />
 
           // <Marker onClick={handleclick} position={name} icon={markerimg} />
         );

@@ -4,9 +4,9 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
-const DescriptionPage = (props) => {
+const DescriptionPage = () => {
   const location=useLocation();
-  const [locationstate,setLocationstate]=React.useState({name: ""})
+  const [locationstate,setLocationstate]=React.useState({name: "", description: "", lat: 0,lng: 0})
 
 
   React.useEffect(()=>{
