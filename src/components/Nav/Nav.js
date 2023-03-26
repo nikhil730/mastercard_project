@@ -49,6 +49,7 @@ const Header = () => {
                       lng: name.lng,
                     },
                   }}
+                  style={{ color: "Black", textDecoration: "none" }}
 
                   // onClick={() => handleClick(name.name)}
                 >
