@@ -36,7 +36,7 @@ const Names = [
     description: "hi alll, I am description",
   },
   {
-    name: "Jharkhan",
+    name: "Jharkhand",
     description: "hi alll, I am description",
   },
   {
