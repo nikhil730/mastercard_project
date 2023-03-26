@@ -7,13 +7,17 @@ import { useState } from 'react';
 const DescriptionPage = (props) => {
   const location=useLocation();
   const [locationstate,setLocationstate]=React.useState({name: ""})
+
+
   React.useEffect(()=>{
     console.log(location);
+
     if(location.state){
       //let _state=location.state as any
       setLocationstate(location.state);
     }
   },[location])
+
   //console.log(props);
   return (
     <div className="description">
@@ -22,7 +26,9 @@ const DescriptionPage = (props) => {
        </div>
        <div className="description__data">
         <h1>{locationstate.name}</h1>
-        <p>analytical data .................</p>
+        <p>{locationstate.description}</p>
+        <p>{locationstate.lat}</p>
+        <p>{locationstate.lng}</p>
        </div>
     </div>
   )

@@ -13,17 +13,18 @@ import DescriptionPage from "../DescriptionPage/DescriptionPage";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import Data from '../Data/Data'
 
 const Header = () => {
   const location = useLocation();
 
-  React.useEffect(() => {
-    console.log(location);
-  }, []);
-  const handleClick = (event) => {
-    console.log(event);
-    <DescriptionPage text={event} />;
-  };
+  // React.useEffect(() => {
+  //   console.log(location);
+  // }, []);
+  // const handleClick = (event) => {
+  //   console.log(event);
+  //   <DescriptionPage text={event} />;
+  // };
 
   return (
     <AppBar style={{ backgroundColor: "#696D66" }} position="static">
@@ -34,16 +35,16 @@ const Header = () => {
         <Box>
           {/* <Select onChange={handleChange}> */}
           <Select>
-            {Names.map((name) => {
+            {Data.map((name) => {
               // return <Link to="/description"><MenuItem onClick={handleClick} value={name.name}>{name.name}</MenuItem></Link>;
               return (
                 <Link
                   to={{
                     pathname: "/description",
-                    state: { name: name.name },
+                    state: { name: name.name, description: name.description, lat: name.lat, lng: name.lng },
                   }}
 
-                  // onClick={() => handleClick(name.name)}
+                // onClick={() => handleClick(name.name)}
                 >
                   <MenuItem value={name.name}>{name.name}</MenuItem>
                 </Link>

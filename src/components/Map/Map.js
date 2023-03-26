@@ -2,9 +2,9 @@ import React from "react";
 import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { Marker } from "@react-google-maps/api";
 import "./Map.css";
-import location from "../Data/Data";
+import Data from "../Data/Data";
 import markerimg from "./marker.png";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 
 const containerStyle = {
   width: "675px",
@@ -42,6 +42,8 @@ function MyComponent() {
     history.push("/description");
   };
 
+  const location = useLocation();
+
   return isLoaded ? (
     <GoogleMap
       mapContainerClassName="map"
@@ -52,9 +54,23 @@ function MyComponent() {
       onUnmount={onUnmount}
     >
       {/* Child components, such as markers, info windows, etc. */}
-      {location.map((mark) => {
+      {Data.map((name) => {
         return (
-          <Marker onClick={handleclick} position={mark} icon={markerimg} />
+          <Link
+            to={{
+              pathname: "/description",
+              state: {
+                name: name.name,
+                description: name.description,
+                lat: name.lat,
+                lng: name.lng,
+              },
+            }}
+          >
+            <Marker onClick={handleclick} position={name} icon={markerimg} />
+          </Link>
+
+          // <Marker onClick={handleclick} position={name} icon={markerimg} />
         );
       })}
     </GoogleMap>
