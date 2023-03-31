@@ -7,12 +7,9 @@ import {
   Select,
   MenuItem,
 } from "@material-ui/core";
-import Names from "../Data/Names";
 import "./Nav.css";
-import DescriptionPage from "../DescriptionPage/DescriptionPage";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import Data from "../Data/Data";
 
 const Header = () => {
