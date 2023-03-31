@@ -29,7 +29,9 @@ const Header = () => {
   return (
     <AppBar style={{ backgroundColor: "#696D66" }} position="static">
       <Toolbar>
-        <Typography variant="h5">Financial Literacy Data Analytics</Typography>
+        <Typography component={Link} to="/" variant="h5" className="navbar">
+          Financial Literacy Data Analytics
+        </Typography>
       </Toolbar>
       <Toolbar style={{ position: "absolute", right: "0%" }}>
         <Box>
