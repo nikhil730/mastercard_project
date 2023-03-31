@@ -28,7 +28,7 @@ function MyComponent() {
 
   const onLoad = React.useCallback(function callback(map) {
     // This is just an example of getting and using the map instance!!! don't just blindly copy!
-    map.setZoom(4);
+    map.setZoom(2);
     setMap(map);
   }, []);
 
@@ -58,7 +58,7 @@ function MyComponent() {
       mapContainerClassName="map"
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={4}
+      zoom={2}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
