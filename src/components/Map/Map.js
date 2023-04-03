@@ -12,8 +12,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 28.7041,
-  lng: 77.1025,
+  lat: 31.7041,
+  lng: 29.1025,
 };
 
 // console.log(process.env.REACT_APP_API_KEY);
@@ -28,7 +28,7 @@ function MyComponent() {
 
   const onLoad = React.useCallback(function callback(map) {
     // This is just an example of getting and using the map instance!!! don't just blindly copy!
-    map.setZoom(2);
+    map.setZoom(1);
     setMap(map);
   }, []);
 
@@ -58,7 +58,7 @@ function MyComponent() {
       mapContainerClassName="map"
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={2}
+      zoom={1}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
