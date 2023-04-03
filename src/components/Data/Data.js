@@ -1,7 +1,7 @@
 const location = [
   {
     lat: 40.7128,
-    lng: 74.0060,
+    lng: -74.0060,
     name: "New York",
     description: "hi alll, I am description", 
   },
