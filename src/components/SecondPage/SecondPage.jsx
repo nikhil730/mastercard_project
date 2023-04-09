@@ -24,10 +24,15 @@ const SecondPage = () => {
 
     const history = useHistory();
 
-    const handleClick = (text) => {
-        const props = text;
-        // console.log(heading, content);
-        history.push('/pages', { state: { props } });
+    const handleClick = (event) => {
+        const myText = event;
+        history.push({
+            pathname: '/pages',
+            state: {
+                heading: myText.heading, 
+                content: myText.content,
+            },
+        });
     }
 
 
@@ -39,10 +44,10 @@ const SecondPage = () => {
                     <button key={text.heading} onClick={() => handleClick(text)}>{text.heading}</button>
                 ))}
             </div>
-            <div className="secondpage__prevnext">
+            {/* <div className="secondpage__prevnext">
                 <button onClick={navigateToPrev}>Prev</button>
                 <button onClick={navigateToNext}>Next</button>
-            </div>
+            </div> */}
         </div>
     );
 };
