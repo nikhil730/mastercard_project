@@ -62,10 +62,11 @@ const SecondPage = () => {
             </div>
             <div className="bottom-buttons">
 
-                <button onClick={handlePrev}>
+                <button onClick={handlePrev} className="prevbtn">
                     Previous
                 </button>
                 <button
+                className="nextbtn"
                     onClick={handleNext}
                 >
                     Next
