@@ -49,7 +49,7 @@
   }
   .paper{
     height: 90vh;
-    margin: 10px;
+    margin: 40px;
   }
   @media screen and (max-width: 600px) {
     .pages {
