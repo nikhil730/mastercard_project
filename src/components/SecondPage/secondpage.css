@@ -4,13 +4,14 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f6f6f6;
+    background-color: #335c72;
     font-family: Arial, sans-serif;
   }
   
   .secondPage h1 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color: white;
   }
   
   .secondpage__buttons {
