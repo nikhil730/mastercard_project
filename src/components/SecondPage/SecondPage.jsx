@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 const SecondPage = () => {
     const [texts, setTexts] = useState([
         {
-            heading: 'Targetted marketig',
+            heading: 'Targeted marketig',
             content:
                 "The campaign should highlight MasterStore's high-end products and emphasize the unique experience that customers can have by shopping at their stores The campaign can be promoted on social media platforms like WeChat, Weibo, and Douyin, which are popular in China.",
         },
