@@ -27,7 +27,7 @@ const Header = () => {
     <AppBar style={{ backgroundColor: "#696D66" }} position="static">
       <Toolbar>
         <Typography component={Link} to="/" variant="h5" className="navbar">
-          Financial Literacy Data Analytics
+          Mastercard China Advisors case competition 2023
         </Typography>
       </Toolbar>
       <Toolbar style={{ position: "absolute", right: "0%" }}>

@@ -16,7 +16,7 @@ function App() {
           <Start/>
         </Route>
         <Route exact path="/map">
-          {/* <Nav /> */}
+          <Nav />
           <center>
             <Map />
           </center>
