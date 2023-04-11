@@ -16,12 +16,16 @@ import img3 from "./img3.jpeg"
 import img4 from "./img4.jpeg"
 
 const DescriptionPage = () => {
+  const history=useHistory();
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex, e) => {
     console.log('selected index: ', selectedIndex)
     setIndex(selectedIndex);
   };
+  const handlePrevious = () =>{
+    history.push('/map');
+  }
   const slides = [
     {
       image: {img1},
@@ -44,7 +48,10 @@ const DescriptionPage = () => {
   ];
 
   return (
-
+    <div className="discription">
+      <div>
+      <button className="button-88 previous" onClick={handlePrevious}>Previous</button>
+      </div>
     <Carousel activeIndex={index}
               onSelect={handleSelect}
               nextIcon={<span aria-hidden="true" className="carousel-control-next-icon changed" />}
@@ -84,6 +91,8 @@ const DescriptionPage = () => {
         </Carousel.Item>
       
     </Carousel>
+    </div>
+
     
     // <div className="description">
     //    <div className="description__image">

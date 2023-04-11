@@ -27,6 +27,13 @@ img{
     height: 90vh;
    margin: auto;
 }
+.discription{
+    display: flex;
+}
+.previous{
+    left: 20px;
+    position: relative;
+}
 .carousel {
     width:900px;
     height:460px;
