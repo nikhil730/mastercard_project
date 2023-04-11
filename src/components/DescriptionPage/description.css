@@ -13,6 +13,16 @@ body{
 .carousel .carousel-control-next-icon.changed {
     background-image: url("./arrow-right-solid.svg");
 }
+.carousel .carousel-control-prev-icon {
+    background-image: url("./leftarrow.png");
+    background-color: black;
+}
+.carousel .carousel-control-prev{
+    left: -110px;
+}
+.carousel .carousel-control-next{
+    right: -110px;
+}
 img{
     height: 90vh;
    margin: auto;
