@@ -53,6 +53,7 @@ const SecondPage = () => {
             <div className="secondpage__buttons">
                 {texts.map((text, index) => (
                     <button
+                        className="button-29 "
                         key={text.heading}
                         onClick={() => handleClick(index)}
                     >
@@ -62,11 +63,11 @@ const SecondPage = () => {
             </div>
             <div className="bottom-buttons">
 
-                <button onClick={handlePrev} className="prevbtn">
+                <button onClick={handlePrev} className="button-88 prevbtn">
                     Previous
                 </button>
                 <button
-                className="nextbtn"
+                className="nextbtn button-88"
                     onClick={handleNext}
                 >
                     Next

@@ -24,8 +24,8 @@ const Pages = () => {
       <h1>{prop.heading}</h1>
       <p>{prop.content}</p>
       <div className="buttons">
-        <button className="previous" onClick={handlePrevious}>Previous</button>
-        <button className="next" onClick={handleNext}>Next</button>
+        <button className="button-88 previous" onClick={handlePrevious}>Previous</button>
+        <button className="button-88 next" onClick={handleNext}>Next</button>
       </div>
     </div>
     </Paper>

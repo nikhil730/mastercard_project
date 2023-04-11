@@ -16,10 +16,12 @@ function App() {
           <Start/>
         </Route>
         <Route exact path="/map">
+          <div style={{width: "100%",  backgroundColor: "rgba(68, 144, 144, 0.108)" }}>
           <Nav />
           <center>
             <Map />
           </center>
+          </div>
         </Route>
         <Route exact path="/description">
           <DescriptionPage />

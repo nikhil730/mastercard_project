@@ -12,7 +12,7 @@ const Start = () => {
   return (
     <div className="start">
         <h3>Data Demons</h3>
-        <button onClick={handleClick}>Click Here</button>
+        <button className="button-88" onClick={handleClick}>Click Here</button>
     </div>
   )
 }

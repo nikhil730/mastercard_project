@@ -5,18 +5,27 @@
     padding: 50px;
     height: -webkit-fill-available;
     justify-content: space-around;
+    background-color: rgba(68, 144, 144, 0.108);
   }
+
+  /* 00ffff */
   
   h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 70px;
+    font-weight: 600;
+    background-image: radial-gradient(#553c9a, #ee4b2b);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
   }
   
   p {
-    font-size: 18px;
+    font-size: 25px;
+    font-style: italic;
     line-height: 1.5;
     margin-bottom: 40px;
+    width: 50%;
+    text-align: center;
   }
   
   .buttons {
@@ -78,3 +87,30 @@
     }
   }
   
+.button-88 {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}

@@ -24,7 +24,7 @@ const Header = () => {
   // };
 
   return (
-    <AppBar style={{ backgroundColor: "#696D66" }} position="static">
+    <AppBar style={{ backgroundColor: "rgba(42, 36, 36, 0.497)" }} position="static">
       <Toolbar>
         <Typography component={Link} to="/" variant="h5" className="navbar">
           Mastercard China Advisors case competition 2023
